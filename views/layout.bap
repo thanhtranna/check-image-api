@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="upload_image">
+  <head>
+    <title>{{ title }}</title>
+
+    <!-- Viewport mobile tag for sensible mobile support -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!--STYLES-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="/styles/custom.css">
+    <!--STYLES END-->
+    {% block css %}
+    {% endblock %}
+  </head>
+
+  <body>
+
+      {% block content %}
+      {% endblock %}
+
+
+      <!--SCRIPTS-->
+      <script src="/js/jquery-3.2.1.min.js"></script>
+      <script src="/libs/angular/angular.min.js"></script>
+      <script src="/libs/bootstrap/js/bootstrap.min.js"></script>
+      <script src="/controllers/upload_image.js"></script>
+      <!--SCRIPTS END-->
+  </body>
+  {% block js %}
+  {% endblock %}
+</html>

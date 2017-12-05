@@ -1,0 +1,49 @@
+{% extends 'layout.bap' %}
+
+{% block content %}
+  <div class="container">
+    <div class="row"ng-cloak
+         ng-controller="uploadController"
+         ng-init="init({{ uploadConfig | dump }})">
+      <div class="col-md-12">
+        <form action="/upload" method="post" name="uploadForm" enctype="multipart/form-data" ng-submit="onUpload()">
+          <div class="form-group row">
+            <div class="row id_image text-center">
+              <div class="col-sm-6 col-sm-push-3 text-center">
+                <label for="image_id" class="verify-avatar">{{ __("UPLOAD IMAGE") }}</label>
+                <div class="img-verify">
+                  <img class="img img-upload" id="id-image" ng-src="{% raw %} {{ idImage }} {% endraw %}" alt="No image" ng-model="idImage"/>
+                </div>
+                <label class="form-control btn btn-warning button_upload">
+                  <i class="fa fa-upload" aria-hidden="true"></i> SELECT FILE
+                  <input type="file" accept=".png,.jpg,.jpeg" name="image_id" id="id-image" class="upload-image" required onchange="viewImg(this,'id-image')"/>
+                </label>
+                <label class="text-red text-center mg-top-10">{{__("Please choose your image.​")}}</label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-sm-12 button-area text-center">
+              <p class="text-center loading" ng-show="loading">
+                <span class="fa fa-spinner fa-5x fa-spin loading-form"></span>
+              </p>
+              <button
+                class="button-primary hover"
+                type="submit"
+                ng-show="!loading"
+                ng-disabled="uploadForm.$invalid"
+              >{{ __("UPLOAD IMAGE") }} <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  </div>
+{% endblock %}
+
+
+{% block js %}
+  <script src="/controllers/upload.js"></script>
+  <script src="/js/upload.js"></script>
+{% endblock %}

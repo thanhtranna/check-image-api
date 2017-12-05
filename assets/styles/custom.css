@@ -1,0 +1,49 @@
+.id_image {
+  margin-top: 20px;
+  padding: 10px 10px;
+}
+
+.id_image img {
+  border: none;
+  min-height: 200px;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.img-verify {
+  border: 2px solid #eba119;
+  border-radius: 25px;
+  overflow: hidden;
+  width: 300px;
+  height: 300px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 10px;
+}
+
+
+.button_upload {
+  border-radius: 20px;
+  font-size: 16px;
+  font-family: "Ubuntu", Tahoma, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.upload-image {
+  position: relative;
+  visibility: hidden;
+}
+
+.button-area .button-primary {
+  background-color: #EAA119;
+  padding: 15px 30px;
+  text-transform: uppercase;
+  font-size: 18px;
+  min-width: 280px;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  margin: 0 5px;
+  color: #fff;
+  display: inline-block;
+}
