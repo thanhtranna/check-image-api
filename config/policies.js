@@ -2,11 +2,12 @@
 
 module.exports.policies = {
 	IndexController: {
-    homepage: [
-
-    ],
     index: [
 
+    ],
+
+    postUpload: [
+      // 'checkImage'
     ]
 	}
 };

@@ -11,8 +11,9 @@ const UploadService = {
     return new Promise((resolve, reject) => {
       var form = new formidable.IncomingForm();
       form.parse(req, function (err, fields, files) {
-        var oldpath = files.filetoupload.path;
-        var newpath = sails.config.API_RESOURCE_SERVER + files.filetoupload.name;
+        console.log('files: ',files);
+        var oldpath = files.image_id.path;
+        var newpath = sails.config.API_RESOURCE_SERVER + files.image_id.name;
         fs.rename(oldpath, newpath, function (err) {
           if (err) throw reject(err);
           resolve(true);

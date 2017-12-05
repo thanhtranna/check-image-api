@@ -14,6 +14,8 @@ module.exports = {
     },
 
     postUpload: async (req, res) => {
+      console.log('q123123123');
+      console.log(req.files);
       let result = await UploadService.uploadImage(req, res);
       console.log(result)
       console.log('Dang upload file');
